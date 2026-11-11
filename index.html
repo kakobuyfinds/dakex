@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>USFans spreadsheet – dansk guide til produktlinks og QC</title>
+<meta name="description" content="Brug en USFans spreadsheet til at sammenligne produktlinks, mål og QC-billeder. Se ti varekategorier, og lav et fragtbudget til Danmark.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:title" content="USFans spreadsheet – dansk guide til produktlinks og QC">
+<meta property="og:description" content="Sammenlign størrelser, sælgerlinks og QC-billeder, og læg et budget for levering til Danmark.">
+<meta name="theme-color" content="#f7f4ed">
+<style>
+:root{color-scheme:light;--bg:#f7f4ed;--ink:#262039;--muted:#514862;--line:#d8d0e0;--panel:#eee8f4;--accent:#48346b;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:.2em}
+a:focus-visible,summary:focus-visible{outline:3px solid #71519e;outline-offset:4px}
+img{display:block;width:100%;height:auto}
+.wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+header,footer{border-block-end:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;padding-block:.85rem}
+.logo{font-weight:800;letter-spacing:.035em}
+main{padding-block:clamp(1.5rem,5vw,4rem)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:clamp(1rem,4vw,4rem)}
+h1,h2,h3{line-height:1.13;margin:0 0 .65em}
+h1{font-size:clamp(2.65rem,7vw,5.7rem);letter-spacing:-.065em;margin-bottom:.22em;overflow-wrap:anywhere}
+h2{font-size:clamp(1.6rem,4vw,2.55rem);letter-spacing:-.035em}
+h3{font-size:1.23rem}
+p{margin:0 0 .9rem;max-width:68ch}
+small,figcaption{color:var(--muted)}
+figure{margin:0}
+figure img{aspect-ratio:1;object-fit:contain;background:#fff;border-radius:.9rem}
+.hero img{aspect-ratio:4/3}
+figcaption{font-size:.85rem;padding-top:.35rem}
+section{margin-top:clamp(2rem,5vw,4rem)}
+.categories,.cards,.gallery{display:grid;gap:.75rem}
+.categories{grid-template-columns:repeat(5,minmax(0,1fr))}
+.categories a{display:flex;align-items:center;min-height:3rem;padding:.65rem .8rem;background:var(--white);border:1px solid var(--line);border-radius:.55rem;font-weight:650}
+.categories a:hover{background:var(--panel)}
+.cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+article,.check{padding:clamp(1rem,3vw,1.65rem);border:1px solid var(--line);border-radius:.9rem;background:var(--panel)}
+article p:last-child,.check p:last-child{margin-bottom:0}
+.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+details{border-top:1px solid var(--line);padding:.8rem 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700}
+details p{margin:.6rem 0 0}
+.cta{display:inline-block;background:var(--accent);color:var(--white);border-radius:.5rem;padding:.65rem 1rem;font-weight:700}
+footer{border-block-start:1px solid var(--line);border-block-end:0}
+@media(max-width:55rem){.categories{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:39rem){.hero,.cards{grid-template-columns:1fr}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebPage","name":"USFans spreadsheet – dansk guide til produktlinks og QC","description":"Brug en USFans spreadsheet til at sammenligne produktlinks, mål og QC-billeder. Se ti varekategorier, og lav et fragtbudget til Danmark.","inLanguage":"da"},
+    {"@type":"FAQPage","name":"Spørgsmål om USFans spreadsheet","inLanguage":"da","mainEntity":[
+      {"@type":"Question","name":"Hvad er en USFans spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det er en produktoversigt, hvor du kan samle og sammenligne sælgerlinks, størrelser og eventuelle kontrolbilleder."}},
+      {"@type":"Question","name":"Hvor fører kategorilinkene hen?","acceptedAnswer":{"@type":"Answer","text":"Kategorilinkene åbner de tilsvarende varekategorier på cafans.com. Du kan undersøge den enkelte vare og dens oplysninger der."}},
+      {"@type":"Question","name":"Kan QC-billeder bevise, at en vare er ægte?","acceptedAnswer":{"@type":"Answer","text":"QC-billeder kan vise synlige detaljer og fejl. Ægthed kræver særskilt dokumentation, f.eks. købsbevis fra en autoriseret forhandler."}},
+      {"@type":"Question","name":"Hvordan beregner jeg prisen for levering til Danmark?","acceptedAnswer":{"@type":"Answer","text":"Læg varepris, gebyrer og fragt sammen, omregn til DKK, og undersøg, om der kommer importomkostninger oveni. Brug den valgte fragtrutes aktuelle vilkår."}}
+    ]}
+  ]
+}
+</script>
+<!--
+Sekundære søgeord: USFans produktlinks, størrelsesguide til sko og tøj, USFans QC-billeder, USFans fragt til Danmark.
+Relaterede søgefraser: originale sælgerlink, modelnummer på varen, sælgerens produktbilleder, farve og størrelse på lager, fodlængde i centimeter, størrelsesskema for sneakers, indersålens længde, mål brystbredde, mål skulderbredde, mål ærmelængde, mål tøjlængde, sammenlign taljemål, indvendig benlængde, hovedomkreds til kasket, kontrolbilleder fra lageret, ujævne sømme, nærbillede af mærkatet, foto med målebånd, fragtoverslag til Danmark, pakkens vægt og mål, faktisk vægt eller volumenvægt, omregn samlet pris til DKK, returfrist og ombytning, udløbet produktlink.
+-->
+<link rel="canonical" href="https://kakobuyfinds.github.io/dakex/">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="https://www.cafans.com">cafans.com</a>
+    <a href="https://www.cafans.com">Se vareoversigten</a>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>USFans spreadsheet</h1>
+      <p>En USFans spreadsheet er en produktoversigt til at sammenligne sælgerlinks, størrelser og kontrolbilleder. Vælg en varekategori på cafans.com, og brug guiden til at tjekke de detaljer, der afgør, om varen passer til dit behov og budget.</p>
+      <small>Uafhængig dansk guide. Varebillederne er visuelle eksempler.</small>
+    </div>
+    <figure>
+      <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/3/5324c8eNike-CW2288-111_1.jpg?rnd=20200526195200&amp;tr=w-900" width="900" height="675" fetchpriority="high" loading="eager" alt="Hvid Nike Air Force 1 ’07-sneaker">
+      <figcaption>Nike Air Force 1 ’07</figcaption>
+    </figure>
+  </div>
+
+  <section aria-labelledby="kategorier">
+    <h2 id="kategorier">Vælg en varekategori</h2>
+    <nav class="categories" aria-label="Varekategorier på cafans.com">
+      <a href="https://cafans.com/category-911-Shoes.html">Sko</a>
+      <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hættetrøjer og sweatre</a>
+      <a href="https://cafans.com/category-913-T-Shirts.html">T-shirts</a>
+      <a href="https://cafans.com/category-914-Jackets.html">Jakker</a>
+      <a href="https://cafans.com/category-915-Pants%2FShorts.html">Bukser og shorts</a>
+      <a href="https://cafans.com/category-916-Headwear.html">Hovedbeklædning</a>
+      <a href="https://cafans.com/category-917-Sets.html">Tøjsæt</a>
+      <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Undertøj</a>
+      <a href="https://cafans.com/category-919-Jersey.html">Sportstrøjer</a>
+      <a href="https://cafans.com/category-920-Accessories.html">Tilbehør</a>
+    </nav>
+  </section>
+
+  <section aria-labelledby="emner">
+    <h2 id="emner">Fra produktlink til købsbeslutning</h2>
+    <div class="cards">
+      <article>
+        <h3>USFans produktlinks og varianter</h3>
+        <p>Åbn det originale sælgerlink, og sammenhold modelnummer, varenavn og sælgerens produktbilleder. Kontrollér, at den valgte farve og størrelse er på lager. Gem linket og variantnavnet sammen, så du kan finde samme udgave igen.</p>
+      </article>
+      <article>
+        <h3>Størrelsesguide til sko og tøj</h3>
+        <p>Start med fodlængde i centimeter, og sammenlign med sælgerens størrelsesskema for sneakers. Spørg efter indersålens længde ved tvivl. Læg en trøje, du bruger, fladt, og mål brystbredde, skulderbredde, ærmelængde og tøjlængde. For bukser kan du sammenligne taljemål og indvendig benlængde. Ved kasketter er hovedomkreds og justeringsmuligheder relevante.</p>
+      </article>
+      <article>
+        <h3>USFans QC-billeder og kvalitetskontrol</h3>
+        <p>QC står for kvalitetskontrol. Sammenlign kontrolbilleder fra lageret med den valgte variant. Se efter ujævne sømme, skæve tryk, pletter og slid. Bed eventuelt om et nærbillede af mærkatet, sålkanten eller lynlåsen. Hvis målene afgør købet, så spørg efter et foto med målebånd.</p>
+      </article>
+      <article>
+        <h3>USFans fragt til Danmark</h3>
+        <p>Lav et fragtoverslag ud fra varepris, eventuelle servicegebyrer og pakkens anslåede vægt og mål. Undersøg, om fragtruten bruger faktisk vægt eller volumenvægt. Sammenlign leveringsmuligheder, undersøg eventuelle importomkostninger, og omregn den samlede pris til DKK. Tjek også returfristen og vilkårene for ombytning.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="detaljer">
+    <h2 id="detaljer">Detaljer at kigge efter</h2>
+    <div class="gallery">
+      <figure>
+        <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Beige Gucci-kasket med GG-mønster">
+        <figcaption>Gucci-kasket · se på skyggen og lukningen</figcaption>
+      </figure>
+      <figure>
+        <img src="https://assets.hermes.com/is/image/hermesproduct/lenco-90-harnais-legendaire--004299S%2002-front-wm-3-0-0-1000-1000_g.jpg?wid=480" width="480" height="480" loading="lazy" decoding="async" alt="Hermès Harnais Légendaire-silketørklæde med mønster">
+        <figcaption>Hermès-tørklæde · undersøg kant og tryk</figcaption>
+      </figure>
+      <figure>
+        <img src="https://assets.christiandior.com/is/image/diorprod/M0455CBAAM55U_E01?%24default_GHC%24=&amp;bfc=on&amp;crop=342%2C104%2C1249%2C1853&amp;hei=520&amp;qlt=80&amp;wid=480" width="480" height="480" loading="lazy" decoding="async" alt="Lys Dior Saddle-taske i læder">
+        <figcaption>Dior-taske · tjek rem og beslag</figcaption>
+      </figure>
+      <figure>
+        <img src="https://tw.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-25--M46977_PM1_Side%20view.png?hei=480&amp;wid=480" width="480" height="480" loading="lazy" decoding="async" alt="Louis Vuitton Speedy Bandoulière 25 med monogram, set fra siden">
+        <figcaption>Louis Vuitton-taske · se på syninger ved håndtagene</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="check" aria-labelledby="tjekliste">
+    <h2 id="tjekliste">Tjekliste før bestilling</h2>
+    <p>Skriv én linje pr. vare med produktlink, variant, mål, billednoter, dato og anslået totalpris. Hvis et link er udløbet, så søg efter modelnavn eller varenummer, og kontrollér mål og materiale på den nye produktside. Gem ordrebekræftelsen, så du kan finde dine valg senere.</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Spørgsmål om USFans spreadsheet</h2>
+    <details open>
+      <summary>Hvad er en USFans spreadsheet?</summary>
+      <p>Det er en produktoversigt, hvor du kan samle og sammenligne sælgerlinks, størrelser og eventuelle kontrolbilleder.</p>
+    </details>
+    <details>
+      <summary>Hvor fører kategorilinkene hen?</summary>
+      <p>Kategorilinkene åbner de tilsvarende varekategorier på cafans.com. Du kan undersøge den enkelte vare og dens oplysninger der.</p>
+    </details>
+    <details>
+      <summary>Kan QC-billeder bevise, at en vare er ægte?</summary>
+      <p>QC-billeder kan vise synlige detaljer og fejl. Ægthed kræver særskilt dokumentation, f.eks. købsbevis fra en autoriseret forhandler.</p>
+    </details>
+    <details>
+      <summary>Hvordan beregner jeg prisen for levering til Danmark?</summary>
+      <p>Læg varepris, gebyrer og fragt sammen, omregn til DKK, og undersøg, om der kommer importomkostninger oveni. Brug den valgte fragtrutes aktuelle vilkår.</p>
+    </details>
+  </section>
+</main>
+<footer>
+  <div class="wrap bar">
+    <span>Dansk guide til produktoversigter</span>
+    <a class="cta" href="https://www.cafans.com">Gå til cafans.com</a>
+  </div>
+</footer>
+</body>
+</html>
